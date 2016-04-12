@@ -1,0 +1,37 @@
+{
+  "name": "via-schema",
+  "version": "0.0.0",
+  "description": "Schemas for via.",
+  "main": "dist/node/node/main.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/demurgos/via-schema.git"
+  },
+  "scripts": {
+    "test": "gulp test"
+  },
+  "keywords": [
+    "odm"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^3.2.1",
+    "lodash": "^4.0.0",
+    "via-core": "^0.2.0",
+    "via-type": "^0.1.9"
+  },
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "gulp": "^3.9.0",
+    "typescript": "^1.8.0-dev.20160125",
+    "via-build-tools": "^0.7.7"
+  },
+  "jspm": {
+    "configFile": "systemjs.config.js",
+    "dependencies": {
+      "lodash": "npm:lodash@^4.0.0"
+    },
+    "devDependencies": {}
+  }
+}
