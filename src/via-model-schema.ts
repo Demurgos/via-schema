@@ -14,4 +14,4 @@ let viaModelOptions: DocumentOptions = {
   }
 };
 
-export let viaModelSchema: schema.ViaModelSchema = new Schema(viaModelOptions);
+export let viaModelSchema: Schema = new Schema(viaModelOptions);

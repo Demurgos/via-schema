@@ -1,2 +1,2 @@
-import { schema } from "via-core";
-export declare let viaModelSchema: schema.ViaModelSchema;
+import { Schema } from "./schema";
+export declare let viaModelSchema: Schema;
