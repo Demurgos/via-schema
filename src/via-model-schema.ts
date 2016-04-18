@@ -7,9 +7,8 @@ let viaModelOptions: DocumentOptions = {
   properties: {
     _id: {type: new StringType()},
     _rev: {type: new StringType()},
-    _type: {type: new StringType()},
+    _name: {type: new StringType()},
     _created: {type: new DateType()},
-    _tested: {type: new DateType()},
     _updated: {type: new DateType()}
   }
 };
