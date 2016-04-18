@@ -1,9 +1,9 @@
 import {assign} from "lodash";
 
 import {DocumentType, DocumentOptions, PropertyDescriptor} from "via-type";
-import {ViaSchema} from "via-core";
+import {schema} from "via-core";
 
-export class Schema extends DocumentType implements ViaSchema {
+export class Schema extends DocumentType implements schema.Schema {
   extend (options: DocumentOptions): Schema {
     return new Schema(Schema.assignOptions(Schema.cloneOptions(this.options), options));
   }

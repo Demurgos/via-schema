@@ -1,9 +1,9 @@
 import {StringType, DateType, DocumentOptions} from "via-type";
-import {Dictionary} from "via-core";
+import {schema} from "via-core";
 
 import {Schema} from "./schema";
 
-let defaultOptions: DocumentOptions = {
+let viaModelOptions: DocumentOptions = {
   properties: {
     _id: {type: new StringType()},
     _rev: {type: new StringType()},
@@ -14,4 +14,4 @@ let defaultOptions: DocumentOptions = {
   }
 };
 
-export let baseSchema = new Schema(defaultOptions);
+export let viaModelSchema: schema.ViaModelSchema = new Schema(viaModelOptions);

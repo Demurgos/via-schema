@@ -1,2 +1,2 @@
 export {Schema} from "./schema";
-export {baseSchema} from "./base-schema";
+export {viaModelSchema} from "./via-model-schema";
