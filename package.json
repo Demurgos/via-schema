@@ -1,6 +1,6 @@
 {
   "name": "via-schema",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Schemas for via.",
   "main": "dist/node/main.js",
   "repository": {
