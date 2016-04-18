@@ -1,4 +1,4 @@
-import * as _ from "lodash";
+import {assign} from "lodash";
 
 import {DocumentType, DocumentOptions, PropertyDescriptor} from "via-type";
 import {ViaSchema} from "via-core";
@@ -10,13 +10,13 @@ export class Schema extends DocumentType implements ViaSchema {
 
   // TODO: add boolean to choose to performe a deep clone (currently it's ~shallow)
   static cloneOptions (source: DocumentOptions): DocumentOptions {
-    let result: DocumentOptions = _.assign({}, source);
+    let result: DocumentOptions = assign({}, source);
     if (source.properties) {
       if (!result.properties) {
         result.properties = {};
       }
       for (let propertyName in source.properties) {
-        result.properties[propertyName] = <PropertyDescriptor> _.assign({}, result.properties[propertyName], source.properties[propertyName]);
+        result.properties[propertyName] = <PropertyDescriptor> assign({}, result.properties[propertyName], source.properties[propertyName]);
       }
     }
     return result;
@@ -25,14 +25,14 @@ export class Schema extends DocumentType implements ViaSchema {
   static assignOptions (target: DocumentOptions, source: DocumentOptions): DocumentOptions {
     // TODO: cleaner assignation
     let oldProps = target.properties;
-    _.assign(target, source);
+    assign(target, source);
     target.properties = oldProps;
     if (source.properties) {
       if (!target.properties) {
         target.properties = {};
       }
       for (let propertyName in source.properties) {
-        target.properties[propertyName] = <PropertyDescriptor> _.assign({}, target.properties[propertyName], source.properties[propertyName]);
+        target.properties[propertyName] = <PropertyDescriptor> assign({}, target.properties[propertyName], source.properties[propertyName]);
       }
     }
     return target;
